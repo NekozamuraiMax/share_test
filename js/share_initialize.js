@@ -1,22 +1,35 @@
-$(window).load(function(){
-	const liffId = "1657662321-nR14gmQy";
-	initializeLiff(liffId);
-});
 
-function initializeLiff(liffId){
+const id = "1657662321-GMLZ3Qpv";
+
+
+window.onload = function(e){
 	liff.init({
-		liffId:liffId
+		liffId:id
 	}).then(() =>{
 		initializeApp();
 	}).catch((err) => {
-		console.log('LIFF Initialization failed ', err);
+		window.alert(err):
 	});
+}
+
+function initializeApp() {
+    // ログインチェック
+    if (liff.isLoggedIn()) {
+        //ログイン済
+
+    } else {
+        // 未ログイン
+        let result = window.confirm("LINE Loginしますか？");
+        if(result) {
+            liff.login();
+        }
+    }
 }
 
 function sendText(text){
 	liff.sendMessages([{
-		'type': 'text',
-		'text': text
+		type: 'text',
+		text: text
 	}]).then(function(){
 		liff.closeWindow();
 	}).catch(funciont(error){
@@ -29,8 +42,18 @@ const key = params.get('key');
 
 $(function(){
 	$('form').submit(function(){
-		alert("submit!");
-		let message= ' ';
+		const genre = document.getElementById("genre").value;
+		const freetxt = document.getElementById("textarea").value;
+		let message= "not message.";
+		if(genre==="day"){
+			message = '[放課後デイサービスへのご相談・ご意見]\n(内容)\n' + freetxt;
+		}else if(genre==="service"){
+			message = '[他のサービスに関するご相談]\n(内容)\n' + freetxt;
+		}else if(genre==="care"){
+			message = '[子育てについてのご相談]\n(内容)\n' + freetxt;
+		}else if(genre==="else"){
+			message = '[その他]\n(内容)\n' + freetxt;
+		}
 		sendText(message);
 		return false;
 	});
