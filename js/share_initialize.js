@@ -1,4 +1,4 @@
-
+ï»¿
 const id = "1657662321-GMLZ3Qpv";
 
 
@@ -13,13 +13,13 @@ window.onload = function(e){
 }
 
 function initializeApp() {
-    // ƒƒOƒCƒ“ƒ`ƒFƒbƒN
+    // ãƒ­ã‚°ã‚¤ãƒ³ãƒã‚§ãƒƒã‚¯
     if (liff.isLoggedIn()) {
-        //ƒƒOƒCƒ“Ï
+        //ãƒ­ã‚°ã‚¤ãƒ³æ¸ˆ
 
     } else {
-        // –¢ƒƒOƒCƒ“
-        let result = window.confirm("LINE Login‚µ‚Ü‚·‚©H");
+        // æœªãƒ­ã‚°ã‚¤ãƒ³
+        let result = window.confirm("LINE Loginã—ã¾ã™ã‹ï¼Ÿ");
         if(result) {
             liff.login();
         }
@@ -46,13 +46,13 @@ $(function(){
 		const freetxt = document.getElementById("textarea").value;
 		let message= "not message.";
 		if(genre==="day"){
-			message = '[•ú‰ÛŒãƒfƒCƒT[ƒrƒX‚Ö‚Ì‚²‘Š’kE‚²ˆÓŒ©]\n(“à—e)\n' + freetxt;
+			message = '[æ”¾èª²å¾Œãƒ‡ã‚¤ã‚µãƒ¼ãƒ“ã‚¹ã¸ã®ã”ç›¸è«‡ãƒ»ã”æ„è¦‹]\n(å†…å®¹)\n' + freetxt;
 		}else if(genre==="service"){
-			message = '[‘¼‚ÌƒT[ƒrƒX‚ÉŠÖ‚·‚é‚²‘Š’k]\n(“à—e)\n' + freetxt;
+			message = '[ä»–ã®ã‚µãƒ¼ãƒ“ã‚¹ã«é–¢ã™ã‚‹ã”ç›¸è«‡]\n(å†…å®¹)\n' + freetxt;
 		}else if(genre==="care"){
-			message = '[qˆç‚Ä‚É‚Â‚¢‚Ä‚Ì‚²‘Š’k]\n(“à—e)\n' + freetxt;
+			message = '[å­è‚²ã¦ã«ã¤ã„ã¦ã®ã”ç›¸è«‡]\n(å†…å®¹)\n' + freetxt;
 		}else if(genre==="else"){
-			message = '[‚»‚Ì‘¼]\n(“à—e)\n' + freetxt;
+			message = '[ãã®ä»–]\n(å†…å®¹)\n' + freetxt;
 		}
 		sendText(message);
 		return false;
