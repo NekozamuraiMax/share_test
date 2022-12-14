@@ -1,6 +1,6 @@
+/*
 const shareForm = document.getElementById('shareform');
 
-/*
 shareForm.onchange = () => {
 	if(document.getElementById('genre').selectedIndex !== 0 && document.getElementById('textarea').value !== ""){
 		submit.disabled = false;
