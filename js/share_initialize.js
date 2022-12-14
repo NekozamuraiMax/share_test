@@ -30,6 +30,7 @@ function sendText(text){
 	if(!liff.isInClient()){
 		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
 	}else{
+		window.alert('send message.');
 		liff.sendMessages([
 			{
 			type: 'text',
@@ -48,6 +49,7 @@ const key = params.get('key');
 
 $(function(){
 	$('form').submit(function(){
+		window.alert('submit!');
 		/*
 		const genre = document.getElementById("genre").value;
 		const freetxt = document.getElementById("textarea").value;
