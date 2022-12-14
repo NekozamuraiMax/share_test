@@ -1,4 +1,3 @@
-﻿
 const id = "1657662321-GMLZ3Qpv";
 
 window.alert('onload');
