@@ -48,10 +48,11 @@ const key = params.get('key');
 
 $(function(){
 	$('form').submit(function(){
+		/*
 		const genre = document.getElementById("genre").value;
 		const freetxt = document.getElementById("textarea").value;
 		let message= "not message.";
-		/*
+		
 		if(genre==='day'){
 			message = '[放課後デイサービスへのご相談・ご意見]\n(内容)\n' + freetxt;
 		}else if(genre==='service'){
@@ -62,7 +63,7 @@ $(function(){
 			message = '[その他]\n(内容)\n' + freetxt;
 		}
 		*/
-		sendText(message);
+		sendText("done.");
 		return false;
 	});
 });
