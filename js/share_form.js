@@ -11,7 +11,7 @@ textarea.onkeyup = () => {
 	let limit = maxChar - count;
 	$('#num').text(limit);
 };
-
+/*
 const id = "1657662321-GMLZ3Qpv";
 
 window.alert('onload');
@@ -82,3 +82,4 @@ $(function(){
 		return false;
 	});
 });
+*/
