@@ -35,6 +35,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
 <script>
+window.alert("script start.");
 const shareForm = document.getElementById('shareform');
 shareForm.onchange = () => {
 	if(document.getElementById('genre').selectedIndex !== 0 && document.getElementById('textarea').value !== ""){
@@ -60,7 +61,7 @@ document.getElementById('cancel').addEventListener('click', () => {
 		liff.closeWindow();
 	}else evenet.preventDefault();
 });
-window.alert("test start.");
+
 const liffid = "1657662321-GMLZ3Qpv";
 window.onload = function(e){
 	liff.init({
