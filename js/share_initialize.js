@@ -27,14 +27,20 @@ function initializeApp() {
 }
 
 function sendText(text){
-	liff.sendMessages([{
-		type: 'text',
-		text: text
-	}]).then(function(){
-		liff.closeWindow();
-	}).catch(funciont(error){
-		window.alert('Failed to send message ' + error);
-	});
+	if(!liff.isInClient()){
+		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+	}else{
+		liff.sendMessages([
+			{
+			type: 'text',
+			text: text
+			}
+		]).then(function(){
+			liff.closeWindow();
+		}).catch(function(error){
+			window.alert('Failed to send message ' + error);
+		});
+	}
 }
 
 const params = (new URL(document.location)).searchParams;
@@ -46,13 +52,13 @@ $(function(){
 		const freetxt = document.getElementById("textarea").value;
 		let message= "not message.";
 		/*
-		if(genre==="day"){
+		if(genre==='day'){
 			message = '[放課後デイサービスへのご相談・ご意見]\n(内容)\n' + freetxt;
-		}else if(genre==="service"){
+		}else if(genre==='service'){
 			message = '[他のサービスに関するご相談]\n(内容)\n' + freetxt;
-		}else if(genre==="care"){
+		}else if(genre==='care'){
 			message = '[子育てについてのご相談]\n(内容)\n' + freetxt;
-		}else if(genre==="else"){
+		}else if(genre==='else'){
 			message = '[その他]\n(内容)\n' + freetxt;
 		}
 		*/
