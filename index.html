@@ -64,6 +64,17 @@ document.getElementById('cancel').addEventListener('click', () => {
 const id = "1657662321-GMLZ3Qpv";
 window.alert('debug start.');
 
+	window.onload = function(e){
+	liff.init({
+		liffId: id
+	}).then(() =>{
+		initializeApp();
+	}).catch((err) => {
+		window.alert(err);
+		console.log('LIFF Initialization failed ', err);
+	});
+};
+
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
