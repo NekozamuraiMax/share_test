@@ -1,10 +1,10 @@
-﻿const shareForm = document.getElementById('shareform');
+const shareForm = document.getElementById('shareform');
 
 shareForm.onchange = () => {
 	if(document.getElementById('genre').selectedIndex !== 0 && document.getElementById('textarea').value !== ""){
 		submit.disabled = false;
 	}else submit.disabled = true;
-}
+};
 
 
 
@@ -14,4 +14,4 @@ textarea.onkeyup = () => {
 	let count = textarea.value.length;
 	let limit = maxChar - count;
 	$('#num').text(limit);
-}
+};
