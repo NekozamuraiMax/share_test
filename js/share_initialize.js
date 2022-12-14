@@ -1,7 +1,7 @@
 ﻿
 const id = "1657662321-GMLZ3Qpv";
 
-
+window.alert('onload');
 window.onload = function(e){
 	liff.init({
 		liffId:id
