@@ -10,7 +10,7 @@ window.onload = function(e){
 	}).catch((err) => {
 		window.alert(err):
 	});
-}
+};
 
 function initializeApp() {
     // ログインチェック
