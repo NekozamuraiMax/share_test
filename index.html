@@ -61,7 +61,31 @@ document.getElementById('cancel').addEventListener('click', () => {
 	}else evenet.preventDefault();
 });
 	
-const id = "1657662321-x9g6kPw2";
+const id = "1657662321-GMLZ3Qpv";
+window.alert('debug start.');
+window.onload = function(e){
+	liff.init({
+		liffId:id
+	}).then(() =>{
+		initializeApp();
+	}).catch((err) => {
+		window.alert(err):
+	});
+}
+
+function initializeApp() {
+    // ログインチェック
+    if (liff.isLoggedIn()) {
+        //ログイン済
+
+    } else {
+        // 未ログイン
+        let result = window.confirm("LINE Loginしますか？");
+        if(result) {
+            liff.login();
+        }
+    }
+}
 
 window.alert('debug end.');
 </script>
