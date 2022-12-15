@@ -52,13 +52,13 @@ $(function(){
 		let message="None. This is not message.";
 		
 		if(genre==='day'){
-			message = '[放課後デイサービスへのご相談・ご意見]\n\n(本文)' + freetxt + '(本文終わり)';
+			message = '[放課後デイサービスへのご相談・ご意見]\n\n(本文)' + freetxt + '(本文終わり)\n\n上記の内容で送信しました。';
 		}else if(genre==='service'){
-			message = '[他のサービスに関するご相談]\n\n(本文)' + freetxt + '(本文終わり)';
+			message = '[他のサービスに関するご相談]\n\n(本文)' + freetxt + '(本文終わり)\n\n上記の内容で送信しました。';
 		}else if(genre==='care'){
-			message = '[子育てについてのご相談]\n\n(本文)' + freetxt + '(本文終わり)';
+			message = '[子育てについてのご相談]\n\n(本文)' + freetxt + '(本文終わり)\n\n上記の内容で送信しました。';
 		}else if(genre==='else'){
-			message = '[その他]\n\n(本文)' + freetxt + '(本文終わり)';
+			message = '[その他]\n\n(本文)' + freetxt + '(本文終わり)\n\n上記の内容で送信しました。';
 		}
 		
 		sendText(message);
