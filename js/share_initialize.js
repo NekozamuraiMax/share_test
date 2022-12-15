@@ -1,13 +1,14 @@
 const id = "1657662321-GMLZ3Qpv";
+window.alert('debug start.');
 
-window.alert('onload');
-window.onload = function(e){
+	window.onload = function(e){
 	liff.init({
-		liffId:id
+		liffId: id
 	}).then(() =>{
 		initializeApp();
 	}).catch((err) => {
-		window.alert(err):
+		window.alert(err);
+		console.log('LIFF Initialization failed ', err);
 	});
 };
 
@@ -15,7 +16,7 @@ function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
-	window.alert('logged in.');
+
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
@@ -29,7 +30,6 @@ function sendText(text){
 	if(!liff.isInClient()){
 		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
 	}else{
-		window.alert('send message.');
 		liff.sendMessages([
 			{
 			type: 'text',
@@ -46,25 +46,24 @@ function sendText(text){
 const params = (new URL(document.location)).searchParams;
 const key = params.get('key');
 
-$(function(){
+$(function(){	
 	$('form').submit(function(){
-		window.alert('submit!');
 		/*
 		const genre = document.getElementById("genre").value;
-		const freetxt = document.getElementById("textarea").value;
-		let message= "not message.";
+		const date  = document.getElementById("datepicker").value;
+		const time  = document.getElementById("scheduled-time").value;
+		const freetxt= document.getElementById("textarea").value;
+		let message="None. This is not message.";
 		
-		if(genre==='day'){
-			message = '[放課後デイサービスへのご相談・ご意見]\n(内容)\n' + freetxt;
-		}else if(genre==='service'){
-			message = '[他のサービスに関するご相談]\n(内容)\n' + freetxt;
-		}else if(genre==='care'){
-			message = '[子育てについてのご相談]\n(内容)\n' + freetxt;
-		}else if(genre==='else'){
-			message = '[その他]\n(内容)\n' + freetxt;
-		}
-		*/
-		sendText("done.");
+		if(genre==='reserve'){
+			message = '[申請内容]予定の追加\n'+'[指定日]'+date+'\n'+'[時間]'+time+'\n'+'[伝達事項]\n'+freetxt+ '\n\n上記の内容で申請しました。';
+		}else if(genre==='cancel'){
+			message = '[申請内容]キャンセル\n'+'[指定日]'+date+'\n'+'[伝達事項]\n'+freetxt+ '\n\n上記の内容で申請しました。';
+		}else if(genre==='change'){
+			message = '[申請内容]利用時間の変更\n'+'[指定日]'+date+'\n'+'[時間]'+time+'\n'+'[伝達事項]\n'+freetxt+ '\n\n上記の内容で申請しました。';
+		}*/
+		sendText('test success.');
 		return false;
 	});
 });
+window.alert('debug end.');
