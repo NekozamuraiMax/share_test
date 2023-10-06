@@ -43,7 +43,18 @@ function sendText(text){
 		});
 	}
 }
-
+$(function(){
+	$('form').submit(function(){
+  		let res = $('form').serialize();
+		$.post('', res);
+		$('#splash').delay(1000).fadeIn('slow', function(){
+			$('#splash-end-logo').fadeIn('slow');
+		});
+		setTimeout(liff.closeWindow, 6000);
+		return false;
+	});
+});
+/*
 $(function(){	
 	$('form').submit(function(){
 		
@@ -65,3 +76,4 @@ $(function(){
 		return false;
 	});
 });
+*/
