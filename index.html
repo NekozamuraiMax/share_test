@@ -16,7 +16,7 @@
 <label class="mt-3"><big><big>ご相談フォーム</big></big></label>
 <p class="mt-3"><big>相談したいこと</big></p>
 <div>
-<select class="form-control w-100 mt-1" id="genre">
+<select class="form-control w-100 mt-1" id="genre" name="genre">
 	<option disabled selected>選択して下さい</option>
 	<option value="day">放課後デイサービスへのご相談・ご意見</option>
 	<option value="service">他のサービスに関するご相談</option>
@@ -25,7 +25,7 @@
 </select>
 </div>
 <p class="mt-3"><big>相談の内容(自由記載)</big></p>
-<textarea id="textarea" maxlength="400" rows="8" cols="40" placeholder="400字以内で、ご記入ください。"></textarea>
+<textarea id="textarea" name="textarea" maxlength="400" rows="8" cols="40" placeholder="400字以内で、ご記入ください。"></textarea>
 <p id="count">あと<span id="num"></span>文字</p>
 <input type="submit" id="submit" class="mt-4 btn btn-primary" value="送信" disabled>	<input type="button" id="cancel" class="mt-4 btn" value="キャンセル" >
 </form>
