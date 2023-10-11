@@ -1,3 +1,24 @@
+#order{
+	opacity: 0;
+}
+
+body.appear #order{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 #splash{
 	position: fixed;
 	width: 100%;
