@@ -6,7 +6,11 @@ window.onload = function(e){
 	liff.init({
 		liffId: id
 	}).then(() =>{
+		$("#splash-logo").delay(1200).fadeOut('slow');
 		initializeApp();
+		$("#splash").delay(1500).fadeOut('slow',function(){
+			$('body').addClass('appear');
+		});
 	}).catch((err) => {
 		window.alert(err);
 		console.log('LIFF Initialization failed ', err);
@@ -17,7 +21,13 @@ function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
-
+	const idToken = liff.getDecodedIDToken();
+      	const userId = idToken.sub;
+	$('#name').text(name);
+	$('form').append('<input type="hidden" name="userId" id="userId">');
+	$('form').append('<input type="hidden" name="nameinput" id="nameinput">');
+	document.getElementById("userId").value = userId;
+	document.getElementById("nameinput").value = name;
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
