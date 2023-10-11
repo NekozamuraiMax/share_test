@@ -46,7 +46,7 @@ function sendText(text){
 $(function(){
 	$('form').submit(function(){
   		let res = $('form').serialize();
-		$.post('', res);
+		$.post('https://script.google.com/macros/s/AKfycbzjjcvTQ2tsLZl0xf-4XbyT_0O2F7__3c5lKiwWP8YUdPdnlcD0UWLkvedSEE88rBof-w/exec', res);
 		$('#splash').delay(1000).fadeIn('slow', function(){
 			$('#splash-end-logo').fadeIn('slow');
 		});
