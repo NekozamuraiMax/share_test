@@ -1,8 +1,8 @@
-#order{
+#shareform{
 	opacity: 0;
 }
 
-body.appear #order{
+body.appear #shareform{
 	animation-name:PageAnimeAppear;
 	animation-duration:1s;
 	animation-delay: 0.8s;
