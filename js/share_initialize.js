@@ -1,5 +1,6 @@
 const url = new URL(document.location);
 const params = new URLSearchParams(url.search);
+window.alert("params:" + params);
 const id = params.get('id');
 
 window.onload = function(e){
@@ -36,7 +37,7 @@ function initializeApp() {
         }
     }
 }
-const postUrl = params.get('topost');
+const postUrl = params.get('topost').toString();
 
 function sendText(text){
 	if(!liff.isInClient()){
