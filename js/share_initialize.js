@@ -1,6 +1,5 @@
 const url = new URL(document.location);
 const params = new URLSearchParams(url.search);
-//window.alert("params:" + params);
 const id = params.get('id');
 
 window.onload = function(e){
@@ -37,12 +36,13 @@ function initializeApp() {
         }
     }
 }
+/*
 const postUrl = params.get('topost').toString();
 window.alert(postUrl);
 const data = postUrl.split('_post_');
 window.alert(data[0]);
 window.alert(data[1]);
-
+*/
 function sendText(text){
 	if(!liff.isInClient()){
 		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
