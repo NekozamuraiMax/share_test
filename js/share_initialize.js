@@ -36,13 +36,13 @@ function initializeApp() {
         }
     }
 }
-/*
+
 const postUrl = params.get('topost').toString();
 window.alert(postUrl);
-const data = postUrl.split('_post_');
-window.alert(data[0]);
-window.alert(data[1]);
-*/
+//const data = postUrl.split('_post_');
+//window.alert(data[0]);
+//window.alert(data[1]);
+
 function sendText(text){
 	if(!liff.isInClient()){
 		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
@@ -62,7 +62,7 @@ function sendText(text){
 $(function(){
 	$('form').submit(function(){
   		let res = $('form').serialize();
-		&.post(data[1], res);
+		$.post(postUrl, res);
 		//$.post('https://script.google.com/macros/s/AKfycbzvJm_KJ0vofPDoe65CX7NkQA9OytEF8hTDnfiIG4k3TuZEmJ43cb39QC2H-Tz6WT2mdg/exec', res);
 		$('#splash').delay(1000).fadeIn('slow', function(){
 			$('#splash-end-logo').fadeIn('slow');
